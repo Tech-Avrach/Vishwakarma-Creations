@@ -1,4 +1,5 @@
 
+import NotFoundPage from "@/pages/404/Page404";
 import About from "@/pages/About/About";
 import Contact from "@/pages/Contact/Contact";
 import Home from "@/pages/Home/Home";
@@ -15,6 +16,8 @@ const AppRoutes = () => {
       <Route path='/services' element={<Service />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
+      {/* add 404 page */}
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

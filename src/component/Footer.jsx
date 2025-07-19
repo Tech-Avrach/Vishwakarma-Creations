@@ -7,18 +7,21 @@ import {
   Instagram, 
   Facebook
 } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
 
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Testimonials', href: '#testimonials' }
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' },
+    // { name: 'Testimonials', path: '/testimonials' }, // Optional: Create route if needed
   ];
+  
 
   const socialLinks = [
     { icon: Instagram, href: '#', label: 'Instagram' },
@@ -59,16 +62,19 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-all duration-300 group"
-                  aria-label={social.label}
-                >
-                  <social.icon size={18} className="group-hover:scale-110 transition-transform" />
-                </a>
-              ))}
+            <ul className="space-y-3">
+  {quickLinks.map((link, index) => (
+    <li key={index}>
+      <Link 
+        to={link.path}
+        className="text-gray-300 hover:text-emerald-400 transition-colors duration-200"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
+</ul>
+
             </div>
           </div>
 
