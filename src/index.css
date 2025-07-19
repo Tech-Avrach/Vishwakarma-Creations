@@ -117,3 +117,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-custom-pattern {
+  background-image: url('/assets/bg.svg');
+  opacity: 0.1;
+}
+

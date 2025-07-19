@@ -1,23 +1,21 @@
-// import { Home } from "lucide-react"
-import Footer from "./component/Footer"
-import Navbar from "./component/Navbar"
-import AboutUsSnapshot from "./pages/Home/Components/About"
-import FeaturedProjects from "./pages/Home/Components/FeaturedProjects"
-import ServicesOffered from "./pages/Home/Components/ServicesOffered"
-
+// src/App.jsx
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./component/Footer";
+import Navbar from "./component/Navbar";
+import AppRoutes from "./routes/routes";
+import ScrollToTop from "./middleware/ScrollToTop";
 
 const App = () => {
   return (
-    <div>
+    <>
+
+      <ScrollToTop /> {/* ✅ Middleware */}
       <Navbar />
-      {/* <Home /> */}
-      <AboutUsSnapshot />
-      <FeaturedProjects />
-      <ServicesOffered />
+      <AppRoutes />
       <Footer />
-    </div>
-  )
-}
 
-export default App
+    </>
+  );
+};
 
+export default App;
