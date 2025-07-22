@@ -102,13 +102,13 @@ const HeroSection = () => {
               </button>
               
               <div className="flex space-x-4">
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer">
+                {/* <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
                   <Dribbble size={20} />
-                </div>
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer">
+                </div> */}
+                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
                   <Instagram size={20} />
                 </div>
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer">
+                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
                   <Facebook size={20} />
                 </div>
               </div>

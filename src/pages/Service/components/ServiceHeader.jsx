@@ -11,7 +11,7 @@ const ServiceHeader = () => {
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full blur-2xl" />
       </div>
 
-      <div className="relative container mx-auto px-6 py-16 lg:py-24">
+      <div className="relative container mx-auto px-6 py-16 lg:py-24 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[80vh]">
           
           {/* Left Text Section */}

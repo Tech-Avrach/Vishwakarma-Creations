@@ -89,9 +89,9 @@ const ServicesOffered = () => {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
                                             {/* Floating Icon */}
-                                            <div className="absolute top-6 left-6 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-emerald-400 border border-emerald-400/30">
+                                            {/* <div className="absolute top-6 left-6 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-emerald-400 border border-emerald-400/30">
                                                 {service.icon}
-                                            </div>
+                                            </div> */}
                                         </div>
 
                                         {/* Decorative Elements */}

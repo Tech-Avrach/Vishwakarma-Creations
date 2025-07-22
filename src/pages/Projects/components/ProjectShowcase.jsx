@@ -366,9 +366,9 @@ const ProjectShowcase = () => {
                 <button className="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25">
                   View Details
                 </button>
-                <button className="flex-1 bg-white border-2 border-emerald-200 text-emerald-600 px-6 py-3 rounded-xl font-semibold hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300">
+                {/* <button className="flex-1 bg-white border-2 border-emerald-200 text-emerald-600 px-6 py-3 rounded-xl font-semibold hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300">
                   Contact Us
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

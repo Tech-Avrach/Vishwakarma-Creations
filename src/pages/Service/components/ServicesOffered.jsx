@@ -159,9 +159,9 @@ const ServicesOffered = () => {
                                                 </div>
 
                                                 {/* Service Number */}
-                                                <div className="absolute bottom-8 right-8 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl font-bold text-gray-800 shadow-lg">
+                                                {/* <div className="absolute bottom-8 right-8 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl font-bold text-gray-800 shadow-lg">
                                                     {service.id}
-                                                </div>
+                                                </div> */}
                                             </div>
 
                                             {/* Decorative Elements */}

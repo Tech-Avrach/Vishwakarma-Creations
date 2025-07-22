@@ -63,7 +63,7 @@ const Footer = () => {
             
             <div className="flex space-x-4">
             <ul className="space-y-3">
-  {quickLinks.map((link, index) => (
+  {/* {quickLinks.map((link, index) => (
     <li key={index}>
       <Link 
         to={link.path}
@@ -72,7 +72,7 @@ const Footer = () => {
         {link.name}
       </Link>
     </li>
-  ))}
+  ))} */}
 </ul>
 
             </div>

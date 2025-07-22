@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section className="bg-white py-20 px-4">
+    <section className="bg-white py-20 px-4 pb-32">
       <div className="max-w-7xl mx-auto">
         {/* Top Row - Two Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

@@ -21,7 +21,7 @@ const AboutHeader = () => {
 </div>
 
 
-      <div className="relative container mx-auto px-6 py-16 lg:py-24">
+      <div className="relative container mx-auto px-6 py-16 lg:py-24 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
           
           {/* Left Text Section */}
