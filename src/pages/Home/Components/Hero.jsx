@@ -1,6 +1,5 @@
-// HeroSection.jsx
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Dribbble, Instagram, Facebook } from 'lucide-react';
+import { ArrowRight, Instagram, Facebook } from 'lucide-react';
 
 const HeroSection = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -47,27 +46,32 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative pt-32 pb-20 bg-gradient-to-br from-slate-800 via-slate-700 to-emerald-900">
+    <div className="relative pt-32 pb-20" style={{ backgroundColor: '#0B3D2E' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-slate-700/50 rounded-full text-sm border border-slate-600">
-              <span className="text-gray-300">Architecture Design Excellence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm border" 
+                 style={{ 
+                   backgroundColor: 'rgba(212, 175, 55, 0.1)', 
+                   borderColor: '#D4AF37',
+                   color: '#D4AF37'
+                 }}>
+              <span>Architecture Design Excellence</span>
             </div>
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight" style={{ color: '#F7F6F2' }}>
                 Modern Architecture
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+                <span style={{ color: '#D4AF37' }}>
                   Design
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
+              <p className="text-xl leading-relaxed max-w-lg" style={{ color: '#F7F6F2', opacity: 0.8 }}>
                 Rooted in innovative design principles, our collection blends minimalism with functionality, bringing elegance and precision into every corner of your space.
               </p>
             </div>
@@ -75,40 +79,59 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="flex space-x-12 pt-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400">
+                <div className="text-4xl font-bold" style={{ color: '#D4AF37' }}>
                   {counts.projects}+
                 </div>
-                <div className="text-gray-400 text-sm mt-2">Completed Projects</div>
+                <div className="text-sm mt-2" style={{ color: '#F7F6F2', opacity: 0.7 }}>Completed Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400">
+                <div className="text-4xl font-bold" style={{ color: '#D4AF37' }}>
                   {counts.clients}+
                 </div>
-                <div className="text-gray-400 text-sm mt-2">Happy Clients</div>
+                <div className="text-sm mt-2" style={{ color: '#F7F6F2', opacity: 0.7 }}>Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400">
+                <div className="text-4xl font-bold" style={{ color: '#D4AF37' }}>
                   {counts.years}+
                 </div>
-                <div className="text-gray-400 text-sm mt-2">Years Experience</div>
+                <div className="text-sm mt-2" style={{ color: '#F7F6F2', opacity: 0.7 }}>Years Experience</div>
               </div>
             </div>
 
             {/* CTA and Social */}
             <div className="flex items-center space-x-8 pt-8">
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-400 text-slate-800 px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-200 flex items-center space-x-2">
+              {/* Primary CTA Button - Rose Gold */}
+              <button 
+                className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-200 flex items-center space-x-2"
+                style={{ 
+                  backgroundColor: '#B76E79', 
+                  color: '#F7F6F2' 
+                }}
+              >
                 <span>Contact</span>
                 <ArrowRight size={20} />
               </button>
               
               <div className="flex space-x-4">
-                {/* <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
-                  <Dribbble size={20} />
-                </div> */}
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
+                {/* Secondary Button Style - Transparent with Gold border */}
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
+                  style={{ 
+                    backgroundColor: 'transparent', 
+                    border: '2px solid #D4AF37',
+                    color: '#D4AF37'
+                  }}
+                >
                   <Instagram size={20} />
                 </div>
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors cursor-pointer text-white">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
+                  style={{ 
+                    backgroundColor: 'transparent', 
+                    border: '2px solid #D4AF37',
+                    color: '#D4AF37'
+                  }}
+                >
                   <Facebook size={20} />
                 </div>
               </div>
@@ -121,25 +144,41 @@ const HeroSection = () => {
               {heroImages.map((src, index) => (
                 <div
                   key={index}
-                  className={`relative rounded-2xl overflow-hidden transition-all duration-1000 ease-in-out ${
+                  className={`relative rounded-2xl overflow-hidden transition-all duration-1000 ease-in-out border-2 ${
                     activeImage === index
                       ? 'flex-[2] opacity-100'
                       : 'flex-[0.8] opacity-70'
                   }`}
+                  style={{ 
+                    borderColor: activeImage === index ? '#D4AF37' : 'rgba(212, 175, 55, 0.3)'
+                  }}
                 >
                   <img
                     src={src}
                     alt={`Architecture ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div 
+                    className="absolute inset-0"
+                    style={{ 
+                      background: activeImage === index 
+                        ? 'linear-gradient(to top, rgba(212, 175, 55, 0.2), transparent)'
+                        : 'linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent)'
+                    }}
+                  />
                 </div>
               ))}
             </div>
             
-            {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-xl" />
+            {/* Decorative Elements - Gold and Rose Gold */}
+            <div 
+              className="absolute -top-4 -right-4 w-20 h-20 rounded-full blur-xl"
+              style={{ backgroundColor: 'rgba(212, 175, 55, 0.3)' }}
+            />
+            <div 
+              className="absolute -bottom-4 -left-4 w-32 h-32 rounded-full blur-xl"
+              style={{ backgroundColor: 'rgba(183, 110, 121, 0.3)' }}
+            />
           </div>
         </div>
       </div>

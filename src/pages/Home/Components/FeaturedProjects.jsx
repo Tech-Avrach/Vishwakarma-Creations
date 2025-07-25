@@ -27,13 +27,13 @@ const FeaturedProjects = () => {
       location: "Bangalore, Karnataka",
       year: "2023",
       category: "Commercial",
-      image: "https://arsitagx-master-article.s3.ap-southeast-1.amazonaws.com/article-photo/393/photo-family-room-na-residence-desain-arsitek-oleh-alvin-tjitrowirjo-alvint-studio.jpeg",
+      image: "https://arsitagx-master-article.s3.ap-Southeast-1.amazonaws.com/article-photo/393/photo-family-room-na-residence-desain-arsitek-oleh-alvin-tjitrowirjo-alvint-studio.jpeg",
       description: "Modern office interior promoting productivity and employee wellbeing"
     }
   ];
 
   return (
-    <section className="bg-white py-20 px-4 pb-32">
+    <section style={{backgroundColor: '#F7F6F2'}} className="py-20 px-4 pb-32">
       <div className="max-w-7xl mx-auto">
         {/* Top Row - Two Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -47,17 +47,20 @@ const FeaturedProjects = () => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <div className="space-y-2">
-                <span className="inline-block px-3 py-1 bg-emerald-600 text-xs font-semibold rounded-full">
+                <span 
+                  className="inline-block px-3 py-1 text-xs font-semibold rounded-full text-white"
+                  style={{backgroundColor: '#0B3D2E'}}
+                >
                   {projects[0].category}
                 </span>
                 <h3 className="text-lg font-bold">{projects[0].title}</h3>
                 <div className="flex items-center space-x-4 text-sm opacity-90">
                   <div className="flex items-center space-x-1">
-                    <MapPin className="w-4 h-4" />
+                    <MapPin className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[0].location}</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[0].year}</span>
                   </div>
                 </div>
@@ -75,17 +78,20 @@ const FeaturedProjects = () => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <div className="space-y-2">
-                <span className="inline-block px-3 py-1 bg-emerald-600 text-xs font-semibold rounded-full">
+                <span 
+                  className="inline-block px-3 py-1 text-xs font-semibold rounded-full text-white"
+                  style={{backgroundColor: '#0B3D2E'}}
+                >
                   {projects[1].category}
                 </span>
                 <h3 className="text-lg font-bold">{projects[1].title}</h3>
                 <div className="flex items-center space-x-4 text-sm opacity-90">
                   <div className="flex items-center space-x-1">
-                    <MapPin className="w-4 h-4" />
+                    <MapPin className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[1].location}</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[1].year}</span>
                   </div>
                 </div>
@@ -97,15 +103,38 @@ const FeaturedProjects = () => {
         {/* Bottom Row - Text Section and Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Section with Border */}
-          <div className="bg-white p-8 border-4 border-orange-400 rounded-lg shadow-lg">
+          <div 
+            className="p-8 border-4 rounded-lg shadow-lg"
+            style={{
+              backgroundColor: '#F7F6F2',
+              borderColor: '#D4AF37'
+            }}
+          >
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
+              <h2 
+                className="text-3xl lg:text-4xl font-bold leading-tight"
+                style={{color: '#0B3D2E'}}
+              >
                 Our Latest Projects
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed">
+              <p 
+                className="text-lg leading-relaxed"
+                style={{color: '#5C5C5C'}}
+              >
                 Discover our most recent architectural and design achievements. Each project represents our commitment to excellence, innovation, and creating spaces that inspire and transform lives through thoughtful design and meticulous execution.
               </p>
-              <button className="group relative bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-10 py-4 rounded-xl font-semibold hover:from-emerald-700 hover:to-emerald-800 transition-all duration-300 flex items-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button 
+                className="group relative text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                style={{
+                  backgroundColor: '#B76E79',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = '#A05D6B';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = '#B76E79';
+                }}
+              >
                 <span>READ MORE</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -122,17 +151,20 @@ const FeaturedProjects = () => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <div className="space-y-2">
-                <span className="inline-block px-3 py-1 bg-emerald-600 text-xs font-semibold rounded-full">
+                <span 
+                  className="inline-block px-3 py-1 text-xs font-semibold rounded-full text-white"
+                  style={{backgroundColor: '#0B3D2E'}}
+                >
                   {projects[2].category}
                 </span>
                 <h3 className="text-lg font-bold">{projects[2].title}</h3>
                 <div className="flex items-center space-x-4 text-sm opacity-90">
                   <div className="flex items-center space-x-1">
-                    <MapPin className="w-4 h-4" />
+                    <MapPin className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[2].location}</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4" style={{color: '#D4AF37'}} />
                     <span>{projects[2].year}</span>
                   </div>
                 </div>

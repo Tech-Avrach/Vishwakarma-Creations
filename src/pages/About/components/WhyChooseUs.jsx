@@ -34,23 +34,14 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-white via-slate-50 to-emerald-50/30 overflow-hidden">
-      {/* Background Pattern */}
-      {/* <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.1"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div> */}
+    <div className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F7F6F2' }}>
 
-      {/* Parallax Background Elements */}
-      {/* <div 
-        className="absolute inset-0 w-full h-[120%] opacity-5"
-        style={{
-          transform: `translateY(${scrollY * 0.3}px)`,
-          backgroundImage: `url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      /> */}
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(212, 175, 55, 0.2)' }}></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(183, 110, 121, 0.2)' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full blur-2xl" style={{ backgroundColor: 'rgba(11, 61, 46, 0.1)' }}></div>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center py-20">
@@ -58,16 +49,16 @@ const WhyChooseUs = () => {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-emerald-100/60 rounded-full border border-emerald-200/50 mb-6">
-              <span className="text-emerald-700 text-sm font-medium">Our Advantage</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full border mb-6" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'rgba(212, 175, 55, 0.3)' }}>
+              <span className="text-sm font-medium" style={{ color: '#0B3D2E' }}>Our Advantage</span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-bold text-slate-800 leading-tight mb-6">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-6" style={{ color: '#333333' }}>
               Why Choose
-              <span className="block text-transparent bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-600 bg-clip-text">
+              <span className="block" style={{ color: '#0B3D2E' }}>
                 Our Team?
               </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#5C5C5C' }}>
               Experience the difference that expertise, innovation, and dedication make in bringing your architectural dreams to life
             </p>
           </div>
@@ -79,31 +70,41 @@ const WhyChooseUs = () => {
               return (
                 <div 
                   key={index}
-                  className="group relative bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl p-8 hover:border-emerald-400/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                  className="group relative backdrop-blur-sm border rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: 'rgba(247, 246, 242, 0.9)', 
+                    borderColor: 'rgba(11, 61, 46, 0.1)' 
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(212, 175, 55, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(11, 61, 46, 0.1)';
+                  }}
                 >
                   {/* Icon */}
                   <div className="mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-500 group-hover:scale-110">
-                      <Icon className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110" style={{ background: 'linear-gradient(to bottom right, #D4AF37, #0B3D2E)' }}>
+                      <Icon className="w-8 h-8" style={{ color: '#F7F6F2' }} />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-emerald-300 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold mb-4 transition-colors duration-300" style={{ color: '#333333' }}>
                       {reason.title}
                     </h3>
                     
-                    <p className="text-slate-600 leading-relaxed transition-colors duration-300 text-lg">
+                    <p className="leading-relaxed transition-colors duration-300 text-lg" style={{ color: '#5C5C5C' }}>
                       {reason.description}
                     </p>
                   </div>
 
                   {/* Hover Effect Border */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-500/30 transition-all duration-500"></div>
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-opacity-100 transition-all duration-500" style={{ borderColor: 'transparent' }}></div>
                   
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-emerald-500/10 to-rose-500/10"></div>
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to bottom right, rgba(212, 175, 55, 0.05), rgba(183, 110, 121, 0.05))' }}></div>
                 </div>
               );
             })}
@@ -113,35 +114,50 @@ const WhyChooseUs = () => {
           <div className="mt-20 text-center">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="group">
-                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text mb-2">
+                <div className="text-3xl lg:text-4xl font-bold mb-2" style={{ color: '#D4AF37' }}>
                   10+
                 </div>
-                <p className="text-slate-600 font-medium">Years Experience</p>
+                <p className="font-medium" style={{ color: '#5C5C5C' }}>Years Experience</p>
               </div>
               <div className="group">
-                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text mb-2">
+                <div className="text-3xl lg:text-4xl font-bold mb-2" style={{ color: '#D4AF37' }}>
                   200+
                 </div>
-                <p className="text-slate-600 font-medium">Projects Completed</p>
+                <p className="font-medium" style={{ color: '#5C5C5C' }}>Projects Completed</p>
               </div>
               <div className="group">
-                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text mb-2">
+                <div className="text-3xl lg:text-4xl font-bold mb-2" style={{ color: '#D4AF37' }}>
                   100%
                 </div>
-                <p className="text-slate-600 font-medium">Client Satisfaction</p>
+                <p className="font-medium" style={{ color: '#5C5C5C' }}>Client Satisfaction</p>
               </div>
               <div className="group">
-                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text mb-2">
+                <div className="text-3xl lg:text-4xl font-bold mb-2" style={{ color: '#D4AF37' }}>
                   24/7
                 </div>
-                <p className="text-slate-600 font-medium">Support Available</p>
+                <p className="font-medium" style={{ color: '#5C5C5C' }}>Support Available</p>
               </div>
             </div>
           </div>
 
           {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <button className="group bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-emerald-500/25">
+            <button 
+              className="group px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+              style={{ 
+                backgroundColor: '#B76E79', 
+                color: '#F7F6F2',
+                boxShadow: '0 20px 40px rgba(183, 110, 121, 0.25)'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'rgba(183, 110, 121, 0.9)';
+                e.target.style.boxShadow = '0 25px 50px rgba(183, 110, 121, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = '#B76E79';
+                e.target.style.boxShadow = '0 20px 40px rgba(183, 110, 121, 0.25)';
+              }}
+            >
               Let's Discuss Your Project
               <span className="inline-block ml-3 group-hover:translate-x-1 transition-transform duration-300">→</span>
             </button>
@@ -150,8 +166,8 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute -z-10 top-8 -left-8 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute -z-10 -bottom-8 -right-8 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
+      <div className="absolute -z-10 top-8 -left-8 w-72 h-72 bg-[#0B3D2E]/5 rounded-full blur-3xl"></div>
+      <div className="absolute -z-10 -bottom-8 -right-8 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
     </div>
   );
 };
