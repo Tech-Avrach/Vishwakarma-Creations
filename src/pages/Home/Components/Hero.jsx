@@ -102,6 +102,7 @@ const HeroSection = () => {
             {/* CTA and Social */}
             <div className="flex items-center space-x-8 pt-8">
               {/* Primary CTA Button - Rose Gold */}
+              <Link to={'/contact'}>
               <button 
                 className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-200 flex items-center space-x-2"
                 style={{ 
@@ -109,11 +110,11 @@ const HeroSection = () => {
                   color: '#F7F6F2' 
                 }}
               >
-                <Link to={'/contact'}>
+                
                   <span>Contact</span>
-                </Link>
                 <ArrowRight size={20} />
               </button>
+              </Link>
               
               <div className="flex space-x-4">
                 {/* Secondary Button Style - Transparent with Gold border */}

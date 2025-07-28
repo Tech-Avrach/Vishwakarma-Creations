@@ -2,6 +2,14 @@ import React from 'react';
 import { Building, MapPin, Calendar, Eye, ArrowRight, Star, Award } from 'lucide-react';
 
 const ProjectHeader = () => {
+
+  const scroll100vh = () => {
+    // scroll 100vh bottom
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  }
   return (
     <div className="relative min-h-[80vh] flex overflow-hidden" style={{ background: 'linear-gradient(135deg, #0B3D2E 0%, #0B3D2E 40%, #1a5a42 100%)' }}>
       {/* Background Pattern - Emerald themed */}
@@ -68,6 +76,7 @@ const ProjectHeader = () => {
                 }}
                 onMouseEnter={(e) => e.target.style.backgroundColor = '#A55B6B'}
                 onMouseLeave={(e) => e.target.style.backgroundColor = '#B76E79'}
+                onClick={() => scroll100vh()} // Smooth scroll to projects section
               >
                 <span>View All Projects</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -90,6 +99,7 @@ const ProjectHeader = () => {
                   e.target.style.borderColor = '#D4AF37';
                   e.target.style.color = '#D4AF37';
                 }}
+                onClick={() => scroll100vh()} 
               >
                 <Eye className="w-5 h-5" />
                 <span>Take a Tour</span>

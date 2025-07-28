@@ -10,7 +10,7 @@ const FeaturedProjects = () => {
       location: "Mumbai, Maharashtra",
       year: "2024",
       category: "Residential",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRaHnWYEcusK2HPlJj61OZ3hnawEAylvsCSg&s",
+      image: "https://sumesshmenonassociates.com/wp-content/uploads/2021/12/apartment-interiors-at-atlantis-banner.webp",
       description: "A contemporary residential project featuring minimalist design with warm accents"
     },
     {
@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
       location: "Delhi, India",
       year: "2024",
       category: "Interior Design",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPmps-ZDDO-eqVD1Cl0mFoAvQY0wAsUrM9uQ&s",
+      image: "https://images.squarespace-cdn.com/content/v1/5b25c12512b13ff21f1d6fe2/1658439061855-0NE0V4LYYY7VO5UJ1B47/Luxury+Bath+01.jpg",
       description: "Sophisticated bathroom design with premium finishes and elegant lighting"
     },
     {
