@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Home, Building, Palette, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesParallax = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -132,6 +133,7 @@ const ServicesParallax = () => {
 
           {/* Bottom CTA */}
           <div className="text-center mt-16">
+            <Link to="/contact">
             <button 
               className="group px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               style={{ 
@@ -151,6 +153,7 @@ const ServicesParallax = () => {
               Start Your Project Today
               <span className="inline-block ml-3 group-hover:translate-x-1 transition-transform duration-300">→</span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

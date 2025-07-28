@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Building, Briefcase, Home, Cog, Hammer, Sparkles, Heart, Star, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesOffered = () => {
     const services = [
@@ -175,7 +176,7 @@ const ServicesOffered = () => {
                                             </div>
 
                                             {/* CTA Buttons */}
-                                            <div className="flex flex-col sm:flex-row gap-6 pt-8">
+                                            {/* <div className="flex flex-col sm:flex-row gap-6 pt-8">
                                                 <button className={`bg-[#B76E79] text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-3 shadow-lg`}>
                                                     <span>Explore Services</span>
                                                     <ArrowRight size={20} />
@@ -183,7 +184,7 @@ const ServicesOffered = () => {
                                                 <button className={`bg-white text-[#0B3D2E] border-2 border-[#D4AF37] px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#D4AF37]/10 transition-all duration-300 shadow-sm`}>
                                                     Learn More
                                                 </button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -251,14 +252,18 @@ const ServicesOffered = () => {
                 
                 {/* CTA Button */}
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                    <Link to={'/contact'}>
                     <button className="group relative bg-[#B76E79] text-white px-12 py-5 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-3 overflow-hidden">
                         <span className="relative z-10">Schedule a Consultation</span>
                         <ArrowRight size={24} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
+                    </Link>
                     
+                    <Link to={'/projects'}>
                     <button className="bg-white/90 backdrop-blur-sm text-[#333333] px-12 py-5 rounded-full font-semibold text-xl border-2 border-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl">
                         <span>View Our Portfolio</span>
                     </button>
+                    </Link>
                 </div>
                 
                 {/* Trust Indicators */}

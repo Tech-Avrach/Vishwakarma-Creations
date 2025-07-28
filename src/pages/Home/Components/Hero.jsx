@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Instagram, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -108,7 +109,9 @@ const HeroSection = () => {
                   color: '#F7F6F2' 
                 }}
               >
-                <span>Contact</span>
+                <Link to={'/contact'}>
+                  <span>Contact</span>
+                </Link>
                 <ArrowRight size={20} />
               </button>
               

@@ -140,7 +140,8 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button - Primary Rose Gold */}
-            <div className="hidden lg:block">
+              <Link to={'/contact'}>
+              <div className="hidden lg:block">
               <button 
                 className="px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 hover:scale-105 transform focus:outline-none focus:ring-2"
                 style={{ 
@@ -160,6 +161,7 @@ const Navbar = () => {
                 Request a quote
               </button>
             </div>
+              </Link>
 
             {/* Professional Animated Mobile Menu Button */}
             <AnimatedHamburger 
@@ -250,7 +252,8 @@ const Navbar = () => {
               ))}
               
               <div className="pt-8">
-                <button 
+              <Link to={'/contact'}>
+              <button 
                   className="w-full px-6 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg transform hover:scale-[1.02] focus:outline-none focus:ring-2"
                   onClick={() => setIsOpen(false)}
                   style={{ 
@@ -267,6 +270,7 @@ const Navbar = () => {
                 >
                   Request a quote
                 </button>
+              </Link>
               </div>
             </div>
           </div>

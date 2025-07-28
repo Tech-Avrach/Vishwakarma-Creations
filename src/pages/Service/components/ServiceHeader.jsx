@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Users, Building2, Sparkles, ArrowRight, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServiceHeader = () => {
   return (
@@ -51,6 +52,7 @@ const ServiceHeader = () => {
                   e.target.style.backgroundColor = '#B76E79';
                   e.target.style.boxShadow = '0 20px 40px rgba(183, 110, 121, 0.3)';
                 }}
+                onClick={() => scrollTo({ top: window.innerHeight, behavior: 'smooth' })} // Smooth scroll to services section
               >
                 <span>Explore Our Services</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FeaturedProjects = () => {
   const projects = [
@@ -123,8 +124,9 @@ const FeaturedProjects = () => {
               >
                 Discover our most recent architectural and design achievements. Each project represents our commitment to excellence, innovation, and creating spaces that inspire and transform lives through thoughtful design and meticulous execution.
               </p>
+              <Link to={'/projects'}>
               <button 
-                className="group relative text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group relative text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mt-3"
                 style={{
                   backgroundColor: '#B76E79',
                 }}
@@ -135,9 +137,12 @@ const FeaturedProjects = () => {
                   e.target.style.backgroundColor = '#B76E79';
                 }}
               >
+                
                 <span>READ MORE</span>
+                
                 <ArrowRight className="w-5 h-5" />
               </button>
+              </Link>
             </div>
           </div>
 

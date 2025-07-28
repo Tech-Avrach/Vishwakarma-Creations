@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Building, Palette, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WhoWeAre = () => {
   return (
@@ -117,6 +118,7 @@ const WhoWeAre = () => {
 
             {/* CTA Button */}
             <div className="pt-2 text-center lg:text-left">
+              <Link to={'/projects'}>
               <button 
                 className="group px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                 style={{ 
@@ -134,6 +136,7 @@ const WhoWeAre = () => {
                 Explore Our Work
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -7,90 +7,75 @@ const ProjectShowcase = () => {
   const [activeProjectId, setActiveProjectId] = useState(null);
 
   // Sample project data
-  const projects = [
-    {
-      id: 1,
-      title: "Modern Stone Villa",
-      thumbnailImg: "https://gbdmagazine.com/wp-content/uploads/2022/10/studio-804-08.jpg",
-      otherImgs: [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753051-6057a35bed5d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607688960-e095a632717e?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753229-f3f5c1a15b14?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753051-6057a35bed5d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607688960-e095a632717e?w=800&q=80"
-      ],
-      address: "Bandra West, Mumbai, Maharashtra",
-      area: "4,500 sq ft",
-      architect: "Vishwakarma Creations",
-      rating: 4.8,
-      yearCompleted: "2023",
-      projectType: "Residential Villa",
-      client: "Private Client"
-    },
-    {
-      id: 2,
-      title: "Contemporary Urban Home",
-      thumbnailImg: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-      otherImgs: [
-        "https://gbdmagazine.com/wp-content/uploads/2022/10/studio-804-08.jpg",
-        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753051-6057a35bed5d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607688960-e095a632717e?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753229-f3f5c1a15b14?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80"
-      ],
-      address: "Koregaon Park, Pune, Maharashtra",
-      area: "3,200 sq ft",
-      architect: "Vishwakarma Creations",
-      rating: 4.9,
-      yearCompleted: "2024",
-      projectType: "Urban Residence",
-      client: "Tech Executive"
-    },
-    {
-      id: 3,
-      title: "Luxury Garden Estate",
-      thumbnailImg: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-      otherImgs: [
-        "https://gbdmagazine.com/wp-content/uploads/2022/10/studio-804-08.jpg",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566752734-eb5ef58dfe1a?w=800&q=80",
-        "https://images.unsplash.com/photo-1600566753051-6057a35bed5d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
-        "https://images.unsplash.com/photo-1600607688960-e095a632717e?w=800&q=80"
-      ],
-      address: "Whitefield, Bangalore, Karnataka",
-      area: "6,200 sq ft",
-      architect: "Vishwakarma Creations",
-      rating: 4.7,
-      yearCompleted: "2024",
-      projectType: "Luxury Estate",
-      client: "Business Owner"
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "Modern Stone Villa",
+    thumbnailImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    otherImgs: [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+      
+     
+      
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+     
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80",
+    ],
+    address: "Bandra West, Mumbai, Maharashtra",
+    area: "4,500 sq ft",
+    architect: "Vishwakarma Creations",
+    rating: 4.8,
+    yearCompleted: "2023",
+    projectType: "Residential Villa",
+    client: "Private Client"
+  },
+  {
+    id: 2,
+    title: "Contemporary Urban Home",
+    thumbnailImg: "https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoidGFsYXRpYW5kcGFydG5lcnMuY29tIiwidiI6ODcyNzM4MzU5LCJyIjoxLCJpIjoiYTU2ZjAyZDQtNmViYy00NzZhLTQ0YWQtOWJiMmRmYmViYTAwIn0/wp-content/uploads/2024/08/1-1.webp",
+    otherImgs: [
+      "https://chiedesign.in/wp-content/uploads/2022/05/Luxury-Interior-Design-Living-Room-1080x675.jpg",
+      "https://www.decorpot.com/images/1469010885modern-home-interior-design-ideas.jpg",
+      "https://media.designcafe.com/wp-content/uploads/2022/10/28103953/affordable-home-interiors-with-homeinteriorskacaptain.jpg",
+      "https://smartscalehousedesign.com/wp-content/uploads/2023/10/living-room-1-1-1024x576.png",
+      "https://5.imimg.com/data5/SELLER/Default/2024/6/429996448/AI/PY/UE/22945375/2024-interior-design-trends.png",
+      "https://media.designcafe.com/wp-content/uploads/2023/04/23211849/bedroom-interior-design-cost-in-india.jpg",
+      "https://media.designcafe.com/wp-content/uploads/2020/10/30144224/contemporary-classic-kitchen-cabinets.jpg",
+    ],
+    address: "Koregaon Park, Pune, Maharashtra",
+    area: "3,200 sq ft",
+    architect: "Vishwakarma Creations",
+    rating: 4.9,
+    yearCompleted: "2024",
+    projectType: "Urban Residence",
+    client: "Tech Executive"
+  },
+  {
+    id: 3,
+    title: "Luxury Garden Estate",
+    thumbnailImg: "https://www.nekretnine1.pro/sites/4251/upload/listings/1684144191_01.jpg",
+    otherImgs: [
+      "https://www.photoandvideoedits.com/public/blog-uploads/How-Interior-Design-Impacts-Real-Estate-Image-Editing.webp",
+      "https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,q_60,w_750/v1/classpop/blog/interior-designers-los-angeles-three-roads_67d187d9f13d6.jpg",
+      "https://foyr.com/learn/wp-content/uploads/2019/03/terrace-design-with-pops-of-color-couch-1024x683.jpg",
+      "https://media.designcafe.com/wp-content/uploads/2020/07/21165705/bathroom-design-in-sleek-look-modern-style-bathroom-with-marble-vitrified-tiles.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9zDFVf-HDKyUBGmDj6Qt9EF9oWf2qPGR_Sg&s",
+      "https://d28pk2nlhhgcne.cloudfront.net/assets/app/uploads/sites/3/2022/04/decoration-petit-balcon-720x533.jpg",
+    ],
+    address: "Whitefield, Bangalore, Karnataka",
+    area: "6,200 sq ft",
+    architect: "Vishwakarma Creations",
+    rating: 4.7,
+    yearCompleted: "2024",
+    projectType: "Luxury Estate",
+    client: "Business Owner"
+  }
+];
 
   const openGallery = (projectId, index = 0) => {
     setActiveProjectId(projectId);
@@ -348,6 +333,7 @@ const ProjectShowcase = () => {
                   }}
                   onMouseEnter={(e) => e.target.style.backgroundColor = '#A55B6B'}
                   onMouseLeave={(e) => e.target.style.backgroundColor = '#B76E79'}
+                  onClick={() => openGallery(project.id, 0)}
                 >
                   View Details
                 </button>

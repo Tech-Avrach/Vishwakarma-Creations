@@ -112,7 +112,7 @@ const ProjectHeader = () => {
         <div className="relative w-full max-w-2xl h-[500px] rounded-2xl overflow-hidden shadow-2xl">
           {/* Main Image */}
           <img 
-            src="https://blog.trianglehomez.com/wp-content/uploads/2020/11/Praveen_06-copy-25-1000x563.jpg"
+            src="https://assets.architecturaldigest.in/photos/60083e76274aca243711c3a4/16:9/w_2560%2Cc_limit/ghaziabad-uttar-pradesh-homes-photos-1366x768.jpg"
             alt="Vishwakarma Creations Project Showcase"
             className="w-full h-full object-cover"
           />

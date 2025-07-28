@@ -12,6 +12,12 @@ const AboutHeader = () => {
     setIsVideoPlaying(false);
   };
 
+  const handleScroll100vh = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ background: 'linear-gradient(to bottom right, #0B3D2E, #1a5a3e, #0B3D2E)' }}>
       {/* Background Pattern */}
@@ -100,6 +106,7 @@ const AboutHeader = () => {
                 onMouseLeave={(e) => {
                   e.target.style.backgroundColor = '#B76E79';
                 }}
+                onClick={handleScroll100vh}
               >
                 Discover Our Story
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>

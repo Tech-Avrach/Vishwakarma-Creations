@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Building, Briefcase, Home, Cog, Hammer, Sparkles, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesOffered = () => {
     const services = [
@@ -117,7 +118,7 @@ const ServicesOffered = () => {
                       </div>
 
                       {/* CTA Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                      {/* <div className="flex flex-col sm:flex-row gap-4 pt-6">
                         <button 
                           className="px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform duration-200 flex items-center justify-center space-x-2"
                           style={{ backgroundColor: '#B76E79', color: '#F7F6F2' }}
@@ -131,7 +132,7 @@ const ServicesOffered = () => {
                         >
                           Read More
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -195,6 +196,7 @@ const ServicesOffered = () => {
           
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to={'/contact'}>
             <button 
               className="group relative text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-3 overflow-hidden"
               style={{ backgroundColor: '#B76E79' }}
@@ -203,7 +205,10 @@ const ServicesOffered = () => {
               <span className="relative z-10">Schedule a Consultation</span>
               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+            </Link>
             
+
+            <Link to={'/projects'}>
             <button 
               className="backdrop-blur-sm px-8 py-4 rounded-full font-medium text-lg border-2 transition-all duration-300 flex items-center space-x-2"
               style={{ 
@@ -214,6 +219,7 @@ const ServicesOffered = () => {
             >
               <span>View Our Portfolio</span>
             </button>
+            </Link>
           </div>
           
           {/* Trust Indicators */}

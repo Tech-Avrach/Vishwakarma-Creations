@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutUsSnapshot = () => {
   return (
@@ -87,11 +88,14 @@ const AboutUsSnapshot = () => {
               color: '#F7F6F2'
             }}
           >
-            <span className="text-lg">Learn More About Us</span>
+                <Link to={'/about'}>
+                  <span className="text-lg">Learn More About Us</span>
+                </Link>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
           {/* Secondary Button - Transparent with Gold border */}
+          <Link to={'/projects'}>
           <button 
             className="group font-semibold transition-all duration-300 flex items-center space-x-3 relative px-8 py-5 rounded-xl border-2"
             style={{ 
@@ -109,6 +113,7 @@ const AboutUsSnapshot = () => {
             </span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
+          </Link>
         </div>
 
         {/* Bottom Accent */}
