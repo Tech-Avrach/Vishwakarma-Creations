@@ -114,7 +114,7 @@ const Navbar = () => {
                 className="w-12 h-12 object-contain"
               />
               <div>
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-xl md:text-2xl font-bold">
                   <span style={{ color: '#F7F6F2' }}>Vishwakarma</span>
                   <span style={{ color: '#D4AF37' }}>Creations</span>
                 </h1>
